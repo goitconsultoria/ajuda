@@ -285,6 +285,7 @@ const messages = {
           email: "Email",
           extraName: "Nome do campo",
           extraValue: "Valor",
+		  disableBot: "Desabilitar chatbot",
           whatsapp: "Conexão Origem: "
         },
         buttons: {
@@ -319,6 +320,20 @@ const messages = {
           okEdit: "Salvar",
           cancel: "Cancelar",
 		  attach: "Anexar Arquivo",
+        },
+		 serviceHours: {
+          dayWeek: "Dia da semana",
+          startTimeA: "Hora Inicial - 1",
+          endTimeA: "Hora Final - 1",
+          startTimeB: "Hora Inicial - 2",
+          endTimeB: "Hora Final - 2",
+          monday: "Segunda-feira",
+          tuesday: "Terça-feira",
+          wednesday: "Quarta-feira",
+          thursday: "Quinta-feira",
+          friday: "Sexta-feira",
+          saturday: "Sábado",
+          sunday: "Domingo",
         },
       },
       userModal: {
@@ -455,7 +470,8 @@ const messages = {
           accept: "Aceitar",
           closed: "Finalizar",
 		  transfer: "Transferir",
-          reopen: "Reabrir"
+          reopen: "Reabrir",
+		  exportAsPDF: "Exportar em PDF"
         },
       },
       newTicketModal: {
@@ -484,6 +500,7 @@ const messages = {
           schedules: "Agendamentos",
           campaigns: "Campanhas",
           annoucements: "Informativos",
+		  logplw:"Atualizações",
           chats: "Chat Interno",
           financeiro: "Financeiro",
           files: "Lista de arquivos",
@@ -495,7 +512,7 @@ const messages = {
           notRegister:"Sem notificações",
           user: {
             profile: "Perfil",
-            logout: "Salir",
+            logout: "Sair",
           },
         },
       },
@@ -888,7 +905,7 @@ const messages = {
         table: {
           name: "Nome",
           color: "Cor",
-          tickets: "Registros Tagdos",
+          tickets: "Registros Tagueados",
           actions: "Ações",
         },
         buttons: {
@@ -986,6 +1003,7 @@ const messages = {
       },
       messageOptionsMenu: {
         delete: "Deletar",
+		reactionSuccess: "Reação add",
         reply: "Responder",
 		edit: 'Editar Mensagem',
 		forward: "Encaminhar",
@@ -1031,6 +1049,7 @@ const messages = {
           "Esta cor já está em uso, escolha outra.",
         ERR_WAPP_GREETING_REQUIRED:
           "A mensagem de saudação é obrigatório quando há mais de uma fila.",
+        ERR_CHECK_NUMBER: "Número inválido. Verifique o número e tente novamente.",
       },
     },
   },

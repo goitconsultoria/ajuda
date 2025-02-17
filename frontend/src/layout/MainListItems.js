@@ -11,6 +11,8 @@ import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
+import AutorenewIcon from '@material-ui/icons/Autorenew';
+import SearchIcon from '@material-ui/icons/Search';
 import PeopleAltOutlinedIcon from "@material-ui/icons/PeopleAltOutlined";
 import ContactPhoneOutlinedIcon from "@material-ui/icons/ContactPhoneOutlined";
 import AccountTreeOutlinedIcon from "@material-ui/icons/AccountTreeOutlined";
@@ -45,6 +47,7 @@ import { AllInclusive, AttachFile, BlurCircular, Description, DeviceHubOutlined,
 import usePlans from "../hooks/usePlans";
 import Typography from "@material-ui/core/Typography";
 import useVersion from "../hooks/useVersion";
+import LogPlw from "../pages/LogPlw";
 
 const useStyles = makeStyles((theme) => ({
   ListSubheader: {
@@ -401,6 +404,13 @@ const MainListItems = (props) => {
               primary="Dashboard"
               icon={<DashboardOutlinedIcon />}
             />
+			
+			<ListItemLink
+				to="/relatorios"
+				primary={i18n.t("Relátorios")}
+				icon={<SearchIcon />}
+			/>
+			
           </>
         )}
       />
@@ -526,6 +536,8 @@ const MainListItems = (props) => {
                 icon={<AnnouncementIcon />}
               />
             )}
+			
+			
             {showOpenAi && (
               <ListItemLink
                 to="/prompts"
@@ -586,6 +598,28 @@ const MainListItems = (props) => {
               icon={<SettingsOutlinedIcon />}
             />
 			
+		{user.super && (	
+			<ListSubheader
+              hidden={collapsed}
+              style={{
+                position: "relative",
+                fontSize: "17px",
+                textAlign: "left",
+                paddingLeft: 20
+              }}
+              inset
+              color="inherit">
+              <Typography variant="overline" style={{ fontWeight: 'normal' }}>  {i18n.t("Sistema")} </Typography>
+            </ListSubheader>
+			)}
+			{user.super && (
+			<ListItemLink
+              to="/logplw"
+              primary={i18n.t("mainDrawer.listItems.logplw")}
+              icon={<AutorenewIcon />}
+            />
+			)}
+			
 			
             {!collapsed && (
               <React.Fragment>
@@ -597,7 +631,7 @@ const MainListItems = (props) => {
               </Hidden> 
               */}
               <Typography style={{ fontSize: "12px", padding: "10px", textAlign: "right", fontWeight: "bold" }}>
-                Versão: {`${version}`}
+                V: {`${version}`}
 
                 </Typography>
               </React.Fragment>
